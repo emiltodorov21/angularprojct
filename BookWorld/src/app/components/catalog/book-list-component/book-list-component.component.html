@@ -1,0 +1,11 @@
+<div class="BookListContainer">
+    <div class="Border">
+        <h2>{{book.name}} </h2>
+        <div class="bottomBorder"></div>
+        <div class="ImageHolder">
+            <a [routerLink]="['/Books', book._id ]">
+                <img class="image" src={{book.picture}} alt="">
+            </a>
+        </div>
+    </div>
+</div>

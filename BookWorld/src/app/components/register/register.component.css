@@ -1,0 +1,69 @@
+.formDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.formClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    background-color: white;
+    gap: 15px;
+    padding: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.Border {
+    background: linear-gradient(34deg, rgba(49,0,55,1) 0%, rgba(199,24,166,1) 50%, rgba(98,21,180,1) 100%);
+    /* background: linear-gradient(34deg, rgba(49,0,55,1) 0%, rgba(199,24,166,1) 50%, rgba(249,65,29,1) 100%); */
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.errorMessage {
+    margin: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+input[type] {
+    width: 200px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+input[type]:focus {
+    width: 210px;
+    background-color: azure;
+}
+
+.errorArea {
+    border: 2px solid red !important;
+}
+
+.button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 150px;
+    font-size: 18px;
+}

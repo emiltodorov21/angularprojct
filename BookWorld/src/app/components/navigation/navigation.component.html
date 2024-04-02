@@ -1,0 +1,58 @@
+<div class="NavBar">
+  <div *ngIf="isLoggedIn" class="Protected">
+    <a routerLink="/">
+      <div>
+      Home
+      <div class="bottomBorder"></div>
+    </div>
+    </a>
+    <a routerLink="Catalog">
+      <div>
+        Catalog
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <a routerLink="AddBook">
+      <div>
+        Add book
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <a routerLink="Profile">
+      <div>
+        Profile
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <button class="LogoutButton" (click)="logoutFunc()">
+      Logout
+      <div class="bottomBorderLogout"></div>
+    </button>
+  </div>
+  <div *ngIf="!isLoggedIn" class="Open">
+    <a routerLink="/">
+      <div>
+        Home
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <a routerLink="Catalog">
+      <div>
+        Catalog
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <a routerLink="Login">
+      <div>
+        Login
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+    <a routerLink="Register">
+      <div>
+        Register
+        <div class="bottomBorder"></div>
+      </div>
+    </a>
+  </div>
+</div>

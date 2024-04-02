@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+.commentContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.formClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formClass textarea, .buttonDiv{
+    z-index: 2;
+}
+
+.addComment {
+    position: relative;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.632);
+    width: 660px;
+    border-radius: 15px;
+    border: 2px solid orangered;
+}
+
+.transParent {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-image: url("../../../../assets/ghostInTheSHell.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.textAreaClass {
+    width: 550px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.904);
+}
+
+.commentDiv {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid orange;
+    border-radius: 15px;
+}
+
+button:disabled {
+    /* opacity: 0; */
+    background-color: lightgray;
+    cursor: wait;
+}
+
+.commentButton {
+    cursor: pointer;
+    width: 140px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.commentButton:disabled {
+    cursor: wait;
+    background-color: lightgray;
+    border-color: lightblue;
+    color: white;
+    transition: 0.2s;
+}
+
+.commentsholder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+    background-color: white;
+    width: 650px;
+    border: 2px solid orangered;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.usernameP {
+    margin: 0px;
+    border-bottom: 2px solid lightgray;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.userAndDelete{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonX {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px;
+    height: 30px;
+    width: 30px;
+    font-family: "Audiowide";
+    background-color: rgba(234, 74, 74, 0.807);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+}
+
+.buttonX:hover:enabled{
+    cursor: pointer;
+    background-color: red;
+}

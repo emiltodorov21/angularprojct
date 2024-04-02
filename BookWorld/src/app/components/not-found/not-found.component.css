@@ -1,0 +1,76 @@
+/* .divError {
+    width: 600px;
+    height: 500px;
+    background-color: antiquewhite;
+} */
+
+.Container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.divError{
+    position: relative;
+    border-radius: 50px;
+    padding: 8px;
+    background: linear-gradient(204deg, #14ffc2, #145aff, #d300f9);
+    background-size: 600% 600%;
+    width: 800px;
+    height: 500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+}
+
+a {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.Button {
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(40, 129, 184);
+    transition: 0.3s;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: inset 0px 0px 10px -1px rgba(0,0,0,0.75);
+}
+
+.Button:hover {
+    background-color:  rgb(30, 103, 182);
+    transition: 0.3s;
+    
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
+}

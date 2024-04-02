@@ -1,0 +1,13 @@
+<div class="searchBoxContainer">
+    <div class="searchBox">
+        <input type="text" [(ngModel)]="searchBook" placeholder="Search...">
+        <button class="iconHolder" (click)="onClickSearch()">
+            <fa-icon class="searchIcon" [icon]="faMagnifyingGlass"></fa-icon>
+        </button>
+    </div>
+</div>
+
+
+<div class="BookContainer">
+    <app-book-list-component *ngFor="let book of currentBooks" [book]="book"></app-book-list-component>
+</div>

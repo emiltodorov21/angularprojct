@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="border">
+        <div class="titleDiv">
+            <h1>My Books</h1>
+            <div class="bottomBorder"></div>
+        </div>
+        <div *ngIf="myBooks.length !== 0" class="bookListContainer">
+            <div class="bookList" *ngFor="let book of myBooks">
+                <img class="image" src={{book.picture}} alt="">
+                <p class="title">{{book.name}}</p>
+                <a [routerLink]="['/Books', book._id ]">
+                    <button class="button"> Go to</button>
+                </a>
+            </div>
+        </div>
+        <p *ngIf="myBooks.length === 0">You havent added any books</p>
+    </div>
+</div>

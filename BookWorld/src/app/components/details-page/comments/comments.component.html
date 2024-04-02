@@ -1,0 +1,27 @@
+<div class="commentContainer">
+    <div *ngIf="currentUserId && hasError!==true" class="addComment">
+        <div class="transParent">
+        </div>
+        <form class="formClass" [formGroup]="addCommentForm" (ngSubmit)="addCommentFunc()">
+            <textarea class="textAreaClass" id="comment" [ngClass]="comment?.invalid && isSubmitted ? 'errorArea' : ''"
+                type="text" formControlName="comment" placeholder="Did you like this book?"> </textarea>
+            <div class="buttonDiv">
+                <button class="commentButton" type="submit" [disabled]="isLoading"> Comment </button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="bookId && hasError!==true">
+        <div class="commentsholder" *ngIf="( allCurrentComments | async)">
+            <!-- Div showing even if allCurrentComments are empty, dont know how to fix it -->
+            <!-- Had to mofidy BE, to throw error response if no comments -->
+            <div class="commentDiv" *ngFor="let comment of( allCurrentComments | async)">
+                <div class="userAndDelete">
+                    <p *ngIf="comment?.username" class="usernameP">{{comment.username}}</p>
+                    <button [disabled]="isLoading" (click)="deleteComFunc(comment._id)"
+                       class="buttonX" *ngIf="comment.owner === currentUserId"> X </button>
+                </div>
+                <p>{{comment.comment}}</p>
+            </div>
+        </div>
+    </div>
+</div>

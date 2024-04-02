@@ -1,0 +1,103 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.homeImg {
+    width: 350px;
+    height: 480px;
+    object-fit: cover;
+}
+
+.homeDesc {
+    color: white;
+    max-width: 550px;
+}
+
+.homeDesc p{
+    font-size: 35px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.homeDesc h1 {
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: "Audiowide";
+    text-shadow: 4px 1px 3px red;
+    /* rgba(0,0,0,0.8); */
+    border-bottom: 3px solid orangered;
+}
+
+.imageDiv {
+    position: relative;
+    cursor: pointer;
+    width: 350px;
+    height: 480px;
+}
+
+.imageDiv:hover .overlayDiv{
+    opacity: 1;
+}
+
+.imageDiv:hover .bottomBorder{
+    width: 200px;
+    transition: 0.8s;
+}
+
+.overlayDiv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 480px;
+    background-color: rgba(71, 71, 71, 0.488);
+    top: 0px;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 30px;
+    color: white;
+}
+
+.borderDiv {
+    padding: 5px;
+    background: linear-gradient(238deg, #0725ff, #d902e8);
+    background-size: 400% 400%;
+
+    -webkit-animation: BorderColor 3s ease infinite;
+    -moz-animation: BorderColor 3s ease infinite;
+    animation: BorderColor 3s ease infinite;
+}
+
+/* animation taken from https://www.gradient-animator.com/ , also used it in error page*/
+
+@-webkit-keyframes BorderColor {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@-moz-keyframes BorderColor {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@keyframes BorderColor {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+
+.bottomBorder {
+    position: absolute;
+    bottom: 220px;
+    border-bottom: 4px solid orangered;
+    width: 30px;
+    transition: 0.4s;
+    border-radius: 5px;
+}

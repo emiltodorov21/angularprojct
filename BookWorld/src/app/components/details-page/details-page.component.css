@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "Contrail One";
+    font-size: 45px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: white;
+}
+
+.titleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.bottomBorder {
+    position: relative;
+    bottom: 8px;
+    border-bottom: 8px solid orangered;
+    height: 1px;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.informationContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+    min-width: 620px;
+    gap: 20px;
+    background-color: white;
+    border: 5px solid #FD2D00;
+}
+
+.bookImage {
+    object-fit: cover;
+    width: 300px;
+    height: 400px;
+}
+
+.ImageDiv p {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.yearAndIconDiv {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calendarIcon {
+    font-size: 22px;
+    color: rgb(61, 84, 105);
+}
+
+.genres {
+    font-size: 22px !important;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+    margin: 0px !important;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.staff {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.summarySection {
+    max-width: 700px;
+    text-indent: 15px;
+}
+
+.summarySection p {
+    margin-top: 5px;
+}
+
+.seeMore {
+    cursor: pointer;
+    color: blue;
+    border: none;
+    background-color: white !important;
+}
+
+.seeMore:hover{
+    font-weight: bold;
+}
+
+.upperBorderSummary {
+    border-bottom: 3px solid orangered;
+    width: 60px;
+}
+
+.editDeleteButtons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons {
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    background-color: rebeccapurple;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.buttons:hover {
+    background-color: blueviolet;
+}
+
+
+.noMatchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noMatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(./star-wars-sad-baby-yoda-white-desktop-wallpaper-preview.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 1000px;
+    border: 5px solid rgb(171, 216, 155);
+    border-radius: 10px;
+}
+
+.notExistPar {
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.bookImageDiv {
+    position: relative;
+}
+
+.WatchButtonsDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.WatchButton {
+    cursor: pointer;
+    font-size: 16px;
+    height: 35px;
+    width: 210px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+.WatchButton:hover {
+    border-radius: 20px;
+    transition: 0.3s;
+    background-color: rgb(255, 181, 45);
+}
+
+.Remove:hover{
+    border-radius: 20px;
+    transition: 0.3s;
+    background-color: rgb(255, 140, 0);
+}
+
+.faEye {
+    font-size: 20px;
+    color: white;
+}

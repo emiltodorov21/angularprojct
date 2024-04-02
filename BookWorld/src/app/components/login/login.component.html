@@ -1,0 +1,24 @@
+<div class="formDiv">
+    <div class="Border">
+        <form class="formClass" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="boxes">
+                <label>Username</label>
+                <input id="name" [ngClass]="name?.invalid && isSubmitted ? 'errorArea' : ''" type="text"
+                    formControlName="name">
+                <p class="errorMessage"
+                    *ngIf=" (name?.hasError('required') || name?.hasError('trimValidator') ) && isSubmitted"> Please
+                    enter name</p>
+            </div>
+            <div class="boxes">
+                <label>Password</label>
+                <input id="password" [ngClass]="password?.invalid && isSubmitted ? 'errorArea' : ''" type="password"
+                    formControlName="password">
+                <p class="errorMessage"
+                    *ngIf=" (password?.hasError('required') || password?.hasError('trimValidator') ) && isSubmitted">
+                    Cannot be blank</p>
+                    <p class="errorMessage" *ngIf="serverReturnedError == '401' || password?.hasError('minlength') && isSubmitted "> Username or password missmatched</p>
+            </div>
+            <button class="button" type="submit"> Login </button>
+        </form>
+    </div>
+</div>

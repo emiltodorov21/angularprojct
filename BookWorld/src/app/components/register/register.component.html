@@ -1,0 +1,39 @@
+<div class="formDiv">
+    <div class="Border">
+        <form class="formClass" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="boxes">
+                <label>Username</label>
+                <input id="name" [ngClass]="name?.invalid && isSubmitted ? 'errorArea' : ''" type="text"
+                    formControlName="name">
+                <p class="errorMessage"
+                    *ngIf=" (name?.hasError('required') || name?.hasError('trimValidator') ) && isSubmitted"> Please
+                    enter name</p>
+                <p class="errorMessage" *ngIf="name?.hasError('maxlength') && isSubmitted">
+                    Name shouldn't exceed 20 characters
+                </p>
+            </div>
+            <div class="boxes">
+                <label>Password</label>
+                <input id="password" [ngClass]="password?.invalid && isSubmitted ? 'errorArea' : ''" type="password"
+                    formControlName="password">
+                <p class="errorMessage"
+                    *ngIf=" (password?.hasError('required') || password?.hasError('trimValidator') ) && isSubmitted">
+                    Cannot be blank</p>
+                <p class="errorMessage"
+                    *ngIf=" (password?.hasError('maxlength') || password?.hasError('minlength')) && isSubmitted">
+                    Password should be between 5 and 30 characters.
+                </p>
+            </div>
+            <div class="boxes">
+                <label>Repeat Password</label>
+                <input id="rePassword" [ngClass]="registerForm.errors?.['mismatch'] && isSubmitted ? 'errorArea' : ''"
+                    type="password" formControlName="rePassword">
+                <p class="errorMessage" *ngIf=" registerForm.errors?.['mismatch'] && isSubmitted"> Passwords dont match
+                </p>
+                <p class="errorMessage" *ngIf="serverReturnedError ==='Username already in use' "> Username already exists</p>
+            </div>
+
+            <button class="button" type="submit"> Register </button>
+        </form>
+    </div>
+</div>

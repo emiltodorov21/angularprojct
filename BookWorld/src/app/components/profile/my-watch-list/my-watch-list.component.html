@@ -1,0 +1,18 @@
+<div class="WatchContainer">
+    <div class="border">
+        <div class="titleDiv">
+            <h1>My Watchlist</h1>
+            <div class="bottomBorder"></div>
+        </div>
+        <div *ngIf="watchList.length !== 0" class="watchListContainer">
+            <div *ngFor="let book of watchList" class="watchListings">
+                <p>{{book.name}}</p>
+                <p *ngIf="book.name.length >= 20">{{book.name|slice:0:20}}...</p>
+                <div class="buttonHolder">
+                    <button (click)="deleteWatchedFunc( book?._id)" class="deleteButton" ><fa-icon class="faSquareMinus" [icon]="faSquareMinus"></fa-icon> </button>
+                    <button (click)="detailPageFuncClick( book?._id)" class="infoButton"><fa-icon class="faInfoCircle" [icon]="faInfoCircle"></fa-icon></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

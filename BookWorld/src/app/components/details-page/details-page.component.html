@@ -1,0 +1,58 @@
+<div *ngIf="currentBook?.name" class="container">
+    <div class="titleDiv">
+        <h1>{{currentBook?.name}}</h1>
+        <div class="bottomBorder"></div>
+    </div>
+    <div class="informationContainer">
+        <div class="ImageDiv">
+            <div class="bookImageDiv">
+                <img class="bookImage" src={{currentBook?.picture}} alt="">
+                <!-- <button *ngIf="hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Remove"> <fa-icon class="faEye" [icon]="faEye"></fa-icon> Remove</button>
+                <button *ngIf="!hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Add">Add</button> -->
+            </div>
+            <div class="yearAndIconDiv">
+                <p> {{currentBook?.year}}</p>
+                <fa-icon class="calendarIcon" [icon]="faCalendarDays"></fa-icon>
+            </div>
+            <p class="genres">{{currentBook?.genre}}</p>
+            <div *ngIf="currentUserId && currentBook?.ownerId === currentUserId" class="editDeleteButtons">
+                <button class="buttons delete" (click)="deleteBookFunction()">Delete</button>
+                <a [routerLink]="['/Edit', currentBook?._id]">
+                    <button class="buttons edit">Edit</button>
+                </a>
+            </div>
+        </div>
+        <div class="details">
+            <div class="staff">
+                <p *ngIf="currentBook?.actors">Actors: {{currentBook?.actors}}</p>
+                <p *ngIf="currentBook?.director">Director: {{currentBook?.director}}</p>
+            </div>
+            <section *ngIf="!seeMore" class="summarySection">
+                <div class="upperBorderSummary"></div>
+                <p>{{summary | slice:0:2000}} <button *ngIf="summary.length>=2000" (click)="seeMoreClickFunction()"
+                        class="seeMore">See More</button> </p>
+            </section>
+            <section *ngIf="seeMore" class="summarySection">
+                <div class="upperBorderSummary"></div>
+                <p> {{summary}} <button (click)="seeMoreClickFunction()" class="seeMore">See less</button> </p>
+
+            </section>
+            <div class="WatchButtonsDiv">
+                <button *ngIf="hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Remove">
+                     Remove from watched <fa-icon class="faEye" [icon]="faEyeSlash"></fa-icon> </button>
+                <button *ngIf="!hasWatched && currentUserId" (click)="addToWatchFunc()"
+                    class="WatchButton Add">Add to watched <fa-icon class="faEye" [icon]="faEye"></fa-icon> </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoaded || !currentBook" class="noMatchContainer">
+    <div class="noMatch" *ngIf="!currentBook?.name">
+        <p class="notExistPar">Book Doesn't Exist :(</p>
+        <a routerLink="/Catalog">
+            <button> Go Back</button>
+        </a>
+    </div>
+</div>
+
+<app-comments [currentUserId]="currentUserId" [hasError]="hasError"></app-comments>

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.NavBar {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(58, 58, 58, 0.882);
+    /* background-color: rgba(7, 6, 68, 0.882); */
+    /* border-bottom: 2px solid orangered; */
+    /* background-image: linear-gradient(to bottom, #d88cdf, #d080d7, #c773cf, #bf67c7, #b65abf); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.Open a{
+ text-decoration: none;
+ color: white;
+}
+
+.Protected a{
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    position: relative;
+    font-family: "Audiowide";
+}
+
+a > div {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+a:hover .bottomBorder {
+    width: 80%;
+    transition: 0.3s;
+    border-bottom: 3px solid orange;
+
+}
+
+.bottomBorder {
+    position: absolute;
+    bottom: 0px;
+    width: 30%;
+    /* border-bottom: 3px solid rgb(175, 116, 234); */
+    border-bottom: 3px solid orangered;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.bottomBorderLogout {
+    position: absolute;
+    bottom: -3px;
+    width: 30%;
+    /* border-bottom: 3px solid rgb(175, 116, 234); */
+    border-bottom: 3px solid orangered;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+
+.Open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Protected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.LogoutButton {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    color: white;
+    font-family: "Audiowide";
+}
+
+.LogoutButton:hover .bottomBorderLogout {
+    width: 70%;
+    transition: 0.3s;
+    border-bottom: 3px solid orange;
+}
