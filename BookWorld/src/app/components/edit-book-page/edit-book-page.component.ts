@@ -18,7 +18,6 @@ export class EditBookPageComponent implements OnInit {
   }
 
   editBookForm = this.fb.group({
-    // NEED CUSTOMER VALIDATOR - required allows empty space. Doesnt automaticly trim it >:( 
     name: ["", [Validators.required, trimValidator, Validators.maxLength(30)]],
     picture: ["", [Validators.required, trimValidator]],
     genre: ["", [Validators.required, trimValidator, Validators.maxLength(30)]],
@@ -32,7 +31,6 @@ export class EditBookPageComponent implements OnInit {
   BookId: string = ""
   userId: string = this.userService.getUserId;
 
-  //There should be an easier way that typing all value's get manually
   get name() {
     return this.editBookForm.get("name");
   }

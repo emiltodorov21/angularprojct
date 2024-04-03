@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .BookContainer {
     display: flex;
     justify-content: center;
@@ -5,12 +7,12 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-
 }
 
 .CatalogHeading {
     display: flex;
     justify-content: center;
+    font-family: 'Lora', serif;
 }
 
 .searchBoxContainer {
@@ -34,14 +36,13 @@
     text-align: center;
     padding-right: 55px;
     border-radius: 50px;
-    border: 3px solid rgb(52, 84, 227);
-    /* outline: 3px solid rgb(52, 84, 227) ; */
+    border: 3px solid #BCAAA4; 
+    font-family: 'Lora', serif;
 }
 
 .searchBox input:focus {
     outline: none;
-    /* outline: 3px solid rgb(52, 84, 227) ; */
-    box-shadow: 0px 0px 5px 0px rgba(133,137,255,1);
+    box-shadow: 0px 0px 5px 0px rgba(143, 188, 143, 1); 
 }
 
 .iconHolder {
@@ -52,22 +53,17 @@
     border: none;
     width: 50px;
     height: 40px;
-    background-color: blue;
+    background-color: #8D6E63; 
     margin-left: 10px;
     transition: 0.3s;
 }
 
 .iconHolder:hover {
     cursor: pointer;
-    background-color:rgb(52, 79, 255);
+    background-color: #A1887F; 
 }
 
-.iconHolder:hover .searchIcon {
-    font-size: 18px;
-}
-
-.searchIcon {
+.iconHolder:hover .searchIcon, .searchIcon {
     color: white;
-    font-size: 16px;
+    font-size: 16px; 
 }
-

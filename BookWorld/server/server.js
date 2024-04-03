@@ -14,7 +14,7 @@ app.use(routes);
 app.listen (PORT , ()=> console.log("Server running on" , PORT));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/ScreenWave');
+    await mongoose.connect('mongodb://127.0.0.1:27017/BookWorld');
     console.log("DB connected")
 }
 

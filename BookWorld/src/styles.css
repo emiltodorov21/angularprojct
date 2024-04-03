@@ -1,11 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
 .MainBackground {
-    /* background-image: url(./pawel-czerwinski-qIZMt-o2RIk-unsplash.jpg) ; */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: 0px;
     min-height: 100vh;
-    /* background-color: rgb(41, 41, 41); */
-    background-image: url(./Alines2.jpg);
+    background-image: url(./background.jpg);
     background-size: cover;
 }

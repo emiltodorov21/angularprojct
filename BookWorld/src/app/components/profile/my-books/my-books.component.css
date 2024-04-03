@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .container {
     display: flex;
@@ -11,8 +11,8 @@
     margin-right: 15%;
     padding: 8px;
     border-radius: 15px;
-    /* from here https://mycolor.space/gradient3?ori=to+left+bottom&hex=%234D2DCC&hex2=%23CB2CF5&hex3=%23EB406E&submit=submit */
-    background-image: linear-gradient(to left bottom, #3f1fbd, #591ec2, #6e1dc7, #821ccb, #951bcf, #b408c4, #cc00b8, #e000ad, #f41592, #ff357a, #ff5367, #ff6d58);
+    background-color: #BCAAA4; 
+    border: 5px solid #BCAAA4;
 }
 
 .border {
@@ -25,6 +25,7 @@
     color: black;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
+    border: 5px solid #BCAAA4; 
 }
 
 .titleDiv {
@@ -37,32 +38,25 @@
 
 .titleDiv h1 {
     margin: 8px;
-    font-family: "Changa"
+    font-family: 'Lora', serif;
+    color: #3E2723; 
 }
 
-.bottomBorder {
-    position: relative;
-    bottom: 18px;
-    border-bottom: 6px solid orangered;
-    height: 1px;
-    width: 60%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+
 
 .bookListContainer {
     display: flex;
-    padding-top: 15px;
     flex-direction: column;
     gap: 5px;
     width: 100%;
-    background-color: rgb(198, 197, 243);
+    background-color: #BCAAA4;
     box-shadow: inset 0px 1px 6px 0px rgba(0,0,0,0.75);
     border-radius: 15px;
 }
 
 .bookList {
     box-sizing: border-box;
+    border:2px solid #8D6E63;
     height: 150px;
     width: 100%;
     padding-left: 10px;
@@ -73,7 +67,6 @@
     background-color: white;
     border-radius: 15px;
     transition: 0.4s;
-    
 }
 
 .bookList:hover {
@@ -86,26 +79,28 @@
     border-radius: 50%;
 }
 
-.button {
+.button{
     cursor: pointer;
-    width: 120px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    background-color: #902dd6;
+    width: 120px; 
+    height: 35px;
+    background-color: #8D6E63; 
     color: white;
-    font-weight: bold;
-    transition: 0.3s;
-
+    font-size: 20px; 
+    font-family: 'Lora', serif;
+    border-radius: 10px; 
+    margin: 5px; 
+    padding: 5px; 
+    transition: 0.3s; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .button:hover {
-    background-color: #6c1aa6;
-    transition: 0.3s;
-
+    background-color: #A1887F; 
 }
 
 .title {
     font-size: 23px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lora', serif; 
 }

@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .NavBar {
     font-size: 20px;
-    color: white;
-    background-color: rgba(58, 58, 58, 0.882);
-    /* background-color: rgba(7, 6, 68, 0.882); */
-    /* border-bottom: 2px solid orangered; */
-    /* background-image: linear-gradient(to bottom, #d88cdf, #d080d7, #c773cf, #bf67c7, #b65abf); */
+    color: #ECEFF1; 
+    background-color: rgba(33, 33, 33, 0.85); 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,19 +11,14 @@
     margin-bottom: 10px;
 }
 
-.Open a{
- text-decoration: none;
- color: white;
-}
-
-.Protected a{
+.Open a, .Protected a {
     text-decoration: none;
-    color: white;
+    color: #ECEFF1; 
 }
 
 a {
     position: relative;
-    font-family: "Audiowide";
+    font-family: 'Lora', serif; 
 }
 
 a > div {
@@ -38,41 +30,19 @@ a > div {
 a:hover .bottomBorder {
     width: 80%;
     transition: 0.3s;
-    border-bottom: 3px solid orange;
-
+    border-bottom: 3px solid #BCAAA4; 
 }
 
-.bottomBorder {
-    position: absolute;
-    bottom: 0px;
-    width: 30%;
-    /* border-bottom: 3px solid rgb(175, 116, 234); */
-    border-bottom: 3px solid orangered;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-.bottomBorderLogout {
+.bottomBorder, .bottomBorderLogout {
     position: absolute;
     bottom: -3px;
     width: 30%;
-    /* border-bottom: 3px solid rgb(175, 116, 234); */
-    border-bottom: 3px solid orangered;
+    border-bottom: 3px solid #BCAAA4;
     transition: 0.3s;
     border-radius: 5px;
 }
 
-
-.Open {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.Protected {
+.Open, .Protected {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,12 +59,12 @@ a:hover .bottomBorder {
     border: none;
     background-color: rgba(255, 255, 255, 0);
     font-size: 20px;
-    color: white;
-    font-family: "Audiowide";
+    color: #ECEFF1; 
+    font-family: 'Lora', serif; 
 }
 
 .LogoutButton:hover .bottomBorderLogout {
     width: 70%;
     transition: 0.3s;
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid #BCAAA4; 
 }

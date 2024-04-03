@@ -15,13 +15,10 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 export class CommentsComponent implements OnInit {
   @Input() currentUserId!: string | undefined | null;
   @Input() hasError!: boolean
-  // Not working, ngOnInit firing before input completes >:(
-  // @Input() bookId!: string;
   bookId = this.route.snapshot.params["id"];
   constructor(private fb: FormBuilder, private commentService: CommentsService, private route: ActivatedRoute) {
 
   }
-  //using async, because it should automaticly unsubscribe. Hopefully im using it correctly.
   allCurrentComments: Observable<Comments[]>|undefined|null = this.commentService.getAllComments(this.bookId as string);
 
   addCommentForm = this.fb.group({
@@ -43,10 +40,7 @@ export class CommentsComponent implements OnInit {
       let ownerId = this.currentUserId as string;
       let bookId = this.bookId as string;
       this.commentService.addComment(comment, bookId, ownerId).subscribe();
-      // Its stupid to call all comments, whenever I add a new comment,
-      // but this is the only solution I have right now
       setTimeout(() => {
-        // Couldnt make it work with BehaviourSubject. Will use timeout for now, until I figure it out ;_;
         this.allCurrentComments = this.commentService.getAllComments(bookId);
         this.isLoading = false;
         this.addCommentForm.get("comment")?.setValue("");
@@ -58,7 +52,6 @@ export class CommentsComponent implements OnInit {
     this.isLoading = true;
     this.commentService.deleteComment(commentId as string, this.bookId ).subscribe();
     setTimeout(() => {
-      // Couldnt make it work with BehaviourSubject. Will use timeout for now, until I figure it out ;_;
       this.allCurrentComments = this.commentService.getAllComments(this.bookId);
       this.isLoading = false;
     }, 500);

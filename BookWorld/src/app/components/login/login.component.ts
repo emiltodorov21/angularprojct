@@ -20,7 +20,6 @@ export class LoginComponent {
   loginForm = this.fb.group({
     name: ["", [Validators.required, trimValidator, Validators.maxLength(20)]],
     password: ["", [Validators.required, trimValidator, Validators.maxLength(30), Validators.minLength(5)]],
-    // otherwise it deprecates the group. Dont know why, but this fixes it
   })
 
   isSubmitted: boolean = false;

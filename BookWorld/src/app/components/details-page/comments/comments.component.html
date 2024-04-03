@@ -12,8 +12,6 @@
     </div>
     <div *ngIf="bookId && hasError!==true">
         <div class="commentsholder" *ngIf="( allCurrentComments | async)">
-            <!-- Div showing even if allCurrentComments are empty, dont know how to fix it -->
-            <!-- Had to mofidy BE, to throw error response if no comments -->
             <div class="commentDiv" *ngFor="let comment of( allCurrentComments | async)">
                 <div class="userAndDelete">
                     <p *ngIf="comment?.username" class="usernameP">{{comment.username}}</p>

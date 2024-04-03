@@ -20,7 +20,6 @@ export class RegisterComponent {
     name: ["", [Validators.required, trimValidator, Validators.maxLength(20)]],
     password: ["", [Validators.required, trimValidator, Validators.maxLength(30), Validators.minLength(5)]],
     rePassword: ["", [Validators.required, trimValidator]],
-    // otherwise it deprecates the group. Dont know why, but this fixes it
   }, { validator: comparePasswords} as AbstractControlOptions)
 
   isSubmitted:boolean = false;

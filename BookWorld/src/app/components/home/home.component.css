@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .homeContainer {
     display: flex;
@@ -15,23 +14,23 @@
 }
 
 .homeDesc {
-    color: white;
+    color: #ECEFF1; 
     max-width: 550px;
 }
 
-.homeDesc p{
+.homeDesc p {
     font-size: 35px;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lora', serif;
     font-style: italic;
+    color: #ECEFF1; 
 }
+
 .homeDesc h1 {
     margin-top: 10px;
     font-size: 50px;
-    font-family: "Audiowide";
-    text-shadow: 4px 1px 3px red;
-    /* rgba(0,0,0,0.8); */
-    border-bottom: 3px solid orangered;
+    font-family: "Lora", serif; 
+    text-shadow: 2px 1px 2px #455A64; 
+    border-bottom: 3px solid #BCAAA4; 
 }
 
 .imageDiv {
@@ -41,11 +40,11 @@
     height: 480px;
 }
 
-.imageDiv:hover .overlayDiv{
+.imageDiv:hover .overlayDiv {
     opacity: 1;
 }
 
-.imageDiv:hover .bottomBorder{
+.imageDiv:hover .bottomBorder {
     width: 200px;
     transition: 0.8s;
 }
@@ -57,17 +56,18 @@
     align-items: center;
     width: 350px;
     height: 480px;
-    background-color: rgba(71, 71, 71, 0.488);
+    background-color: rgba(33, 33, 33, 0.5); 
     top: 0px;
     opacity: 0;
     transition: 0.5s;
     font-size: 30px;
-    color: white;
+    font-family: 'Lora', serif; 
+    color: #ECEFF1; 
 }
 
 .borderDiv {
     padding: 5px;
-    background: linear-gradient(238deg, #0725ff, #d902e8);
+    background: linear-gradient(238deg, #6A4F4B, #D7CCC8);
     background-size: 400% 400%;
 
     -webkit-animation: BorderColor 3s ease infinite;
@@ -75,28 +75,26 @@
     animation: BorderColor 3s ease infinite;
 }
 
-/* animation taken from https://www.gradient-animator.com/ , also used it in error page*/
-
 @-webkit-keyframes BorderColor {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
+    0% {background-position: 0% 96%}
+    50% {background-position: 100% 5%}
+    100% {background-position: 0% 96%}
 }
 @-moz-keyframes BorderColor {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
+    0% {background-position: 0% 96%}
+    50% {background-position: 100% 5%}
+    100% {background-position: 0% 96%}
 }
 @keyframes BorderColor {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
+    0% {background-position: 0% 96%}
+    50% {background-position: 100% 5%}
+    100% {background-position: 0% 96%}
 }
 
 .bottomBorder {
     position: absolute;
     bottom: 220px;
-    border-bottom: 4px solid orangered;
+    border-bottom: 4px solid #8D6E63; 
     width: 30px;
     transition: 0.4s;
     border-radius: 5px;

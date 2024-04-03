@@ -7,8 +7,6 @@
         <div class="ImageDiv">
             <div class="bookImageDiv">
                 <img class="bookImage" src={{currentBook?.picture}} alt="">
-                <!-- <button *ngIf="hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Remove"> <fa-icon class="faEye" [icon]="faEye"></fa-icon> Remove</button>
-                <button *ngIf="!hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Add">Add</button> -->
             </div>
             <div class="yearAndIconDiv">
                 <p> {{currentBook?.year}}</p>
@@ -39,9 +37,9 @@
             </section>
             <div class="WatchButtonsDiv">
                 <button *ngIf="hasWatched && currentUserId" (click)="addToWatchFunc()" class="WatchButton Remove">
-                     Remove from watched <fa-icon class="faEye" [icon]="faEyeSlash"></fa-icon> </button>
+                     Remove from watched    <fa-icon class="faEye" [icon]="faEyeSlash"></fa-icon> </button>
                 <button *ngIf="!hasWatched && currentUserId" (click)="addToWatchFunc()"
-                    class="WatchButton Add">Add to watched <fa-icon class="faEye" [icon]="faEye"></fa-icon> </button>
+                    class="WatchButton Add">Add to watched    <fa-icon class="faEye" [icon]="faEye"></fa-icon> </button>
             </div>
         </div>
     </div>

@@ -19,7 +19,6 @@ export class AddBookPageComponent {
  }
 
  addBookForm = this.fb.group({
-  // NEED CUSTOMER VALIDATOR - required allows empty space. Doesnt automaticly trim it >:( 
   name: ["", [Validators.required, trimValidator, Validators.maxLength(30)]],
   picture: ["", [Validators.required, trimValidator]],
   genre:["", [Validators.required, trimValidator,Validators.maxLength(30)]],
@@ -31,7 +30,6 @@ export class AddBookPageComponent {
 
  isSubmitted:boolean = false;
 
- //for ease of use, not to type to full name in the template
  get name(){
   return this.addBookForm.get("name");
  }

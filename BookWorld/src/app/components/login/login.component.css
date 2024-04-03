@@ -11,17 +11,16 @@
     justify-content: center;
     align-items: center;
     width: 450px;
-    background-color: white;
+    background-color: #FBF0E4; 
     gap: 15px;
     padding: 15px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     border-radius: 10px;
 }
 
 .Border {
-    background: linear-gradient(34deg, rgba(49,0,55,1) 0%, rgba(199,24,166,1) 50%, rgba(98,21,180,1) 100%);
-    /* background: linear-gradient(34deg, rgba(49,0,55,1) 0%, rgba(199,24,166,1) 50%, rgba(249,65,29,1) 100%); */
+    background: linear-gradient(34deg, #8A5A44 0%, #CBAF87 50%, #D4C4A8 100%); 
     padding: 6px;
     border-radius: 15px;
 }
@@ -37,7 +36,7 @@
 .errorMessage {
     margin: 0px;
     font-size: 15px;
-    color: red;
+    color: #B22222;
     font-weight: bold;
 }
 
@@ -47,17 +46,17 @@ input[type] {
     font-size: 14px;
     text-align: center;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid #8A5A44;
     transition: 0.3s;
 }
 
 input[type]:focus {
     width: 210px;
-    background-color: azure;
+    background-color: #FFF8DC; 
 }
 
 .errorArea {
-    border: 2px solid red !important;
+    border: 2px solid #B22222 !important; 
 }
 
 .button {
@@ -66,4 +65,5 @@ input[type]:focus {
     height: 30px;
     width: 150px;
     font-size: 18px;
+    border-radius: 5px; 
 }
